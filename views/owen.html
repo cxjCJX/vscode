@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+    <title>个人中心</title>
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #204d74;
+            color: white;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+            font-size: 21px;
+            height: 47px;
+            padding-bottom: 0px;
+            border-top-width: 0px;
+            padding-top: 12px;
+            width: 95px;
+            text-align: center;
+            border-radius: 6px;
+            top: 2px;
+        }
+
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            width: 95px;
+            height: 47px;
+        }
+
+        .file:hover {
+            color: white;
+            text-decoration-line: none;
+        }
+        #bj{
+            background: url(/images/bj.jpg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/home?useID={{useID}}">木建博客</a>
+            </div>
+        </div>
+    </nav>
+    <div id="bj" class="jumbotron">
+        <div class="container">
+            <h1>Hello,{{name}}!</h1>
+            <img style="width: 250px;height: 300px;" src="/images/image/{{imgUrl}}">
+            <form action="/upload?useID={{useID}}" method="POST" style="padding-left: 23px;"
+                enctype="multipart/form-data">
+                <a href="javascript:void(0)" class="file">更改头像
+                    <input id="add1" type="file" value="请选择头像" name="file">
+                </a>
+                <input class="btn btn-primary btn-lg" type="submit" value="上传头像">
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {{each grwz}}
+            <div class="col-md-4">
+                <h2>相关文章</h2>
+                <h3>文章名称:{{$value.bookName}}</h3>
+                <h4>点赞量:{{$value.goodNum}}</h4>
+                <h4>浏览量:{{$value.clickNum}}</h4>
+                <p><a class="btn btn-default" href="/show?useID={{useID}}&bookName={{$value.bookName}}" role="button">点击查看 &raquo;</a></p>
+                <p><a class="btn btn-default" href="/del?useID={{useID}}&bookName={{$value.bookName}}" role="button">删除文章 &raquo;</a></p>
+            </div>
+            {{/each}}
+        </div>
+
+        <hr>
+
+        <footer style="text-align: center;">
+            <p>&copy; 2016 Company, Inc.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

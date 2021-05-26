@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .all {
+            background: url(/images/aa.jpg);
+            text-align: center;
+            padding-top: 74px;
+            height: 706px;
+        }
+
+        #x,
+        #x1,
+        #x2,
+        #x3 {
+            display: inline;
+            padding-right: 20px;
+        }
+
+        #big1 {
+            font-size: 5em;
+            color: aquamarine;
+        }
+
+        .big2 {
+            font-size: 2em;
+            color: cornflowerblue;
+        }
+
+        #goon {
+            padding-top: 211px;
+            font-size: 1.5em;
+
+        }
+
+        a:visited {
+            color: beige;
+        }
+
+        a:hover {
+            color: beige;
+        }
+
+        a {
+            color: beige;
+            text-decoration: none;
+        }
+
+        #x1,
+        #x2,
+        #x3 {
+            animation: change 2s linear 0s infinite;
+        }
+
+        @keyframes change {
+            0% {
+                color: rgb(7, 245, 253);
+            }
+
+            50% {
+                color: white;
+            }
+
+            100% {
+                color: rgb(253, 253, 7);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div>
+            <h1 id="big1">欢迎来到木建博客</h1>
+            <h2 class="big2">知识是人类进步的基石</h2>
+            <h2 class="big2">尽情畅游知识的海洋</h2>
+        </div>
+        <div id="goon">
+            <a href="/register">
+                <h4 id="x">点击此处继续</h4>
+                <h4 id="x1">></h4>
+                <h4 id="x2">></h4>
+                <h4 id="x3">></h4>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
