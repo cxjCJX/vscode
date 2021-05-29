@@ -33,6 +33,10 @@ router.get('/owen', function(req, res, next) {
   res.render('owen');
 });
 
+router.get('/back',function(req,res){
+  res.render('back')
+})
+
 // router.post('/login',(req,res) =>{
 //   res.render('two')
 // })
