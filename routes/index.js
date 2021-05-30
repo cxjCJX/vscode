@@ -34,7 +34,15 @@ router.get('/owen', function(req, res, next) {
 });
 
 router.get('/back',function(req,res){
-  res.render('back')
+  db.query('select * from back',(err,result) =>{
+    if(err) throw err;
+    console.log(result[0]);
+    res.render('back',{data:result[0]})
+  })
+})
+
+router.get('/back/upa',(req,res) =>{
+  res.render('')
 })
 
 // router.post('/login',(req,res) =>{

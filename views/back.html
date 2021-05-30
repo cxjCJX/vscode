@@ -74,16 +74,22 @@
                         <p>I like to make cool and creative designs. My design stash is always full of refreshing ideas. Feel free to take a look around my Vcard.</p>
                     </div>
                 	<ul class="personal-info">
-						<li><label>Name</label><span>Anderson smith</span></li>
-                        <li><label>Date of birth</label><span>March 13, 1988</span></li>
-                        <li><label>Address</label><span>Melbourne Victoria 3000 Australia</span></li>
-                        <li><label>Email</label><span>A.smith@gmail.com</span></li>
-                        <li><label>Phone</label><span>+123 456 789 111</span></li>
-                        <li><label>Website</label><span>www.asmith.com</span></li>
+						<li><label>Name</label><span><%= data.name%></span></li>
+                        <li><label>Date of birth</label><span><%= data.birth%></span></li>
+                        <li><label>Address</label><span><%= data.address%></span></li>
+                        <li><label>Email</label><span><%= data.email%></span></li>
+                        <li><label>Phone</label><span><%= data.phone%></span></li>
+                        <li><label>Website</label><span><%= data.website%></span></li>
+                        <input type="button" value="修改" onclick="chex()" />
                     </ul>
                 </div>        
                 </div>
             </div>
         
     </body>
+    <script>
+        function chex(){
+            window.location.href='/back/up'
+        }
+    </script>
 </html>
